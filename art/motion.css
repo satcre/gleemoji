@@ -1,0 +1,113 @@
+/* ---------- motion ---------- */
+.anim{transform-box:fill-box;transform-origin:center;animation-delay:var(--d,0s)}
+.anim > *{animation-delay:var(--d,0s)}
+.anim.b{transform-box:view-box;transform-origin:64px 118px}
+.b-bounce{animation:bounce 1.6s cubic-bezier(.3,0,.3,1) infinite}
+@keyframes bounce{0%,60%,100%{transform:translateY(0) scale(1,1)}20%{transform:translateY(-10px) scale(.97,1.03)}40%{transform:translateY(0) scale(1.05,.95)}}
+.anim.b-shake{transform-origin:64px 64px;animation:shake 1s ease-in-out infinite}
+@keyframes shake{0%,100%{transform:rotate(0)}15%{transform:rotate(-7deg)}30%{transform:rotate(6deg)}45%{transform:rotate(-5deg)}60%{transform:rotate(4deg)}75%{transform:rotate(0)}}
+.b-shiver{animation:shiver .22s linear infinite}
+@keyframes shiver{0%,100%{transform:translateX(0)}25%{transform:translateX(-1.8px)}75%{transform:translateX(1.8px)}}
+.b-sway{animation:sway 2.6s ease-in-out infinite}
+@keyframes sway{0%,100%{transform:rotate(0)}25%{transform:rotate(-6deg)}75%{transform:rotate(6deg)}}
+.anim.b-wobble{transform-origin:64px 64px;animation:wobble 3s ease-in-out infinite}
+@keyframes wobble{0%,100%{transform:rotate(0) skewX(0)}25%{transform:rotate(-9deg) skewX(4deg)}50%{transform:rotate(4deg) skewX(-3deg)}75%{transform:rotate(8deg) skewX(3deg)}}
+.b-breathe{animation:breathe 3s ease-in-out infinite}
+@keyframes breathe{0%,100%{transform:scale(1)}50%{transform:scale(1.045,1.03)}}
+.b-jump{animation:jump 2s cubic-bezier(.2,.8,.3,1) infinite}
+@keyframes jump{0%,50%,100%{transform:translateY(0) scale(1)}8%{transform:translateY(0) scale(1.06,.92)}20%{transform:translateY(-14px) scale(.95,1.06)}34%{transform:translateY(0) scale(1.04,.96)}}
+.b-tilt{animation:tilt 3s ease-in-out infinite}
+@keyframes tilt{0%,100%{transform:rotate(0)}30%,70%{transform:rotate(-8deg) translateX(-2px)}}
+.b-droop{animation:droop 3.2s ease-in-out infinite}
+@keyframes droop{0%,100%{transform:translateY(0)}50%{transform:translateY(3px) scale(1.01,.97)}}
+.anim.b-beat{transform-origin:64px 64px;animation:beat 1.2s ease-in-out infinite}
+@keyframes beat{0%,40%,100%{transform:scale(1)}10%{transform:scale(1.16)}20%{transform:scale(1.02)}30%{transform:scale(1.1)}}
+.b-flicker{animation:flicker 1.1s ease-in-out infinite}
+@keyframes flicker{0%,100%{transform:scale(1,1) skewX(0)}25%{transform:scale(.97,1.07) skewX(-3deg)}50%{transform:scale(1.02,.96) skewX(2deg)}75%{transform:scale(.98,1.05) skewX(3deg)}}
+.anim.b-pop{transform-origin:64px 66px;animation:pop 2.4s cubic-bezier(.4,1.5,.5,1) infinite}
+@keyframes pop{0%{transform:rotate(0) scale(1)}35%{transform:rotate(72deg) scale(1.15)}55%,100%{transform:rotate(72deg) scale(1)}}
+.b-hover{animation:hover 2.4s ease-in-out infinite}
+@keyframes hover{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+.b-flash{animation:flash 1.8s ease-in-out infinite}
+@keyframes flash{0%,40%,62%,100%{opacity:1;transform:scale(1)}45%{opacity:.35;transform:scale(1.08)}50%{opacity:1}55%{opacity:.5}}
+.b-wiggle{animation:wiggle 2s ease-in-out infinite}
+@keyframes wiggle{0%,50%,100%{transform:rotate(0)}10%{transform:rotate(-7deg)}20%{transform:rotate(7deg)}30%{transform:rotate(-5deg)}40%{transform:rotate(3deg)}}
+
+.p-blink{animation:blink 3.6s infinite}
+@keyframes blink{0%,92%,100%{transform:scaleY(1)}95%{transform:scaleY(.1)}}
+.p-pulse{animation:pulse 1s ease-in-out infinite}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.28)}}
+.p-spin{animation:spin 2.4s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.p-drip{animation:drip 1.4s ease-in infinite}
+@keyframes drip{0%{transform:translateY(0);opacity:1}70%{transform:translateY(10px);opacity:1}100%{transform:translateY(14px);opacity:0}}
+.p-flow > path{stroke-dasharray:12 8;animation:flow .6s linear infinite}
+@keyframes flow{to{stroke-dashoffset:-20}}
+.p-float{animation:float 2.4s ease-out infinite}
+@keyframes float{0%{transform:translate(0,0);opacity:1}80%{transform:translate(4px,-10px);opacity:0}81%{transform:translate(0,4px);opacity:0}100%{transform:translate(0,0);opacity:1}}
+.p-halo{animation:halo 2s ease-in-out infinite}
+@keyframes halo{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
+.anim.p-wag{transform-origin:50% 0;animation:wag .8s ease-in-out infinite}
+@keyframes wag{0%,100%{transform:rotate(0)}25%{transform:rotate(12deg)}75%{transform:rotate(-12deg)}}
+.p-twinkle{animation:twinkle 1.6s ease-in-out infinite}
+.p-twinkle.t2{animation-delay:calc(var(--d,0s) - .5s)}.p-twinkle.t3{animation-delay:calc(var(--d,0s) - 1s)}
+@keyframes twinkle{0%,100%{transform:scale(1) rotate(0)}50%{transform:scale(.55) rotate(45deg)}}
+.p-look{animation:look 3s ease-in-out infinite}
+@keyframes look{0%,100%{transform:translateX(0)}25%,40%{transform:translateX(-14px)}60%,80%{transform:translateX(0)}}
+.p-roll{animation:roll 2.6s ease-in-out infinite}
+@keyframes roll{0%,85%,100%{transform:translate(0,0)}30%{transform:translate(-5px,4px)}60%{transform:translate(5px,4px)}}
+.p-draw > path{stroke-dasharray:80;animation:draw 2.4s ease-in-out infinite}
+@keyframes draw{0%,70%,100%{stroke-dashoffset:0}75%{stroke-dashoffset:80}95%{stroke-dashoffset:0}}
+.anim.p-flame{transform-origin:50% 0;animation:flame .3s ease-in-out infinite alternate}
+@keyframes flame{from{transform:scaleY(1)}to{transform:scaleY(1.35)}}
+.p-glow{animation:glow 2s ease-in-out infinite;opacity:0}
+@keyframes glow{0%,100%{opacity:0}50%{opacity:.55}}
+.anim.p-hat{transform-origin:50% 100%;animation:hat 1.6s ease-in-out infinite}
+@keyframes hat{0%,60%,100%{transform:rotate(0)}20%{transform:rotate(-10deg)}40%{transform:rotate(6deg)}}
+.p-confetti{animation:confetti 1.6s ease-in infinite}
+@keyframes confetti{0%{transform:translateY(0) rotate(0);opacity:1}80%{transform:translateY(16px) rotate(200deg);opacity:0}81%{transform:translateY(-6px);opacity:0}100%{transform:translateY(0);opacity:1}}
+
+.p-confetti.t2,.p-float.t2{animation-delay:calc(var(--d,0s) - .6s)}.p-confetti.t3{animation-delay:calc(var(--d,0s) - 1.1s)}
+
+/* new motions */
+.anim.b-roll{transform-origin:64px 64px;animation:roll2 1.4s ease-in-out infinite}
+@keyframes roll2{0%,100%{transform:rotate(0)}25%{transform:rotate(-22deg)}50%{transform:rotate(0)}75%{transform:rotate(22deg)}}
+.b-nudge{animation:nudge 1.8s ease-in-out infinite}
+@keyframes nudge{0%,50%,100%{transform:translateX(0)}20%{transform:translateX(5px)}35%{transform:translateX(-2px)}}
+.anim.b-spin{transform-origin:64px 64px;animation:spin 6s linear infinite}
+.anim.b-ring{transform-origin:64px 14px;animation:ring 1.6s ease-in-out infinite}
+@keyframes ring{0%,60%,100%{transform:rotate(0)}10%{transform:rotate(14deg)}20%{transform:rotate(-12deg)}30%{transform:rotate(8deg)}40%{transform:rotate(-5deg)}}
+.anim.b-flip{transform-origin:64px 64px;animation:flip 2.2s ease-in-out infinite}
+@keyframes flip{0%,40%,100%{transform:scaleX(1)}20%{transform:scaleX(.12)}}
+.p-spin.slow{animation-duration:9s}
+.p-look2{animation:look2 3.4s ease-in-out infinite}
+@keyframes look2{0%,100%{transform:translateX(0)}40%,70%{transform:translateX(10px)}}
+.p-puff{animation:puff 1.2s ease-out infinite}
+@keyframes puff{0%{transform:scale(.6);opacity:1}100%{transform:scale(1.3) translateY(4px);opacity:0}}
+.p-crackL{animation:crackL 2.4s ease-in-out infinite}.p-crackR{animation:crackR 2.4s ease-in-out infinite}
+@keyframes crackL{0%,40%,100%{transform:translate(0,0) rotate(0)}60%,80%{transform:translate(-4px,2px) rotate(-6deg)}}
+@keyframes crackR{0%,40%,100%{transform:translate(0,0) rotate(0)}60%,80%{transform:translate(4px,2px) rotate(6deg)}}
+.anim.p-wave{transform-origin:50% 100%;animation:wave 1.4s ease-in-out infinite}
+@keyframes wave{0%,60%,100%{transform:rotate(0)}10%,30%{transform:rotate(-16deg)}20%,40%{transform:rotate(12deg)}}
+.anim.p-flapL{transform-origin:100% 50%;animation:flapL .5s ease-in-out infinite alternate}
+.anim.p-flapR{transform-origin:0% 50%;animation:flapR .5s ease-in-out infinite alternate}
+.anim.p-flapL,.anim.p-flapR{transform-box:fill-box}
+@keyframes flapL{to{transform:scaleX(.55)}}@keyframes flapR{to{transform:scaleX(.55)}}
+.p-steam{animation:float 2.2s ease-out infinite}
+.p-rain{animation:rain 1s linear infinite}
+@keyframes rain{0%{transform:translateY(-6px);opacity:0}20%{opacity:1}100%{transform:translateY(14px);opacity:0}}
+.p-flash{animation:flash 1.6s ease-in-out infinite}
+.p-sand{animation:sand 1s linear infinite;stroke-dasharray:4 4}
+.p-sand > path{stroke-dasharray:4 5;animation:flow .5s linear infinite}
+@keyframes sand{to{opacity:1}}
+.p-hit{animation:hit 2s cubic-bezier(.5,0,.2,1) infinite}
+@keyframes hit{0%,60%,100%{transform:translate(0,0)}30%{transform:translate(14px,-14px)}40%{transform:translate(0,0)}48%{transform:translate(2px,-2px)}}
+.p-draw2 > path{stroke-dasharray:120;animation:draw2 3s ease-in-out infinite}
+@keyframes draw2{0%,70%,100%{stroke-dashoffset:0}75%{stroke-dashoffset:120}98%{stroke-dashoffset:0}}
+.anim.p-flag{transform-origin:0 50%;animation:flag 1.4s ease-in-out infinite}
+@keyframes flag{0%,100%{transform:skewY(0) scaleX(1)}50%{transform:skewY(-5deg) scaleX(.95)}}
+.p-typing{animation:typing 1.2s ease-in-out infinite}
+.p-typing.t2{animation-delay:calc(var(--d,0s) - .9s)}.p-typing.t3{animation-delay:calc(var(--d,0s) - .6s)}
+@keyframes typing{0%,60%,100%{transform:translateY(0);opacity:.55}30%{transform:translateY(-6px);opacity:1}}
+.p-flame.t2,.p-rain.t2,.p-twinkle.t2{animation-delay:calc(var(--d,0s) - .4s)}.p-flame.t3,.p-rain.t3,.p-float.t3{animation-delay:calc(var(--d,0s) - .7s)}
+.p-puff.t2{animation-delay:calc(var(--d,0s) - .6s)}.p-steam.t2{animation-delay:calc(var(--d,0s) - 1.1s)}

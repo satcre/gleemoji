@@ -1,0 +1,37 @@
+{
+  "name": "gleemoji",
+  "version": "0.1.0",
+  "description": "Original animated SVG emojis for React, Vue, Svelte, Angular and plain HTML. Glossy, flat and outline styles, tree-shakable, zero dependencies.",
+  "keywords": ["emoji", "emojis", "svg", "icons", "animated", "react", "vue", "web-component", "nextjs", "nuxt", "emoji-picker"],
+  "license": "MIT",
+  "author": "",
+  "type": "module",
+  "sideEffects": ["./dist/element.js", "*.css"],
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": { "types": "./dist/index.d.ts", "import": "./dist/index.js", "default": "./dist/index.js" },
+    "./react": { "types": "./dist/react.d.ts", "import": "./dist/react.js", "default": "./dist/react.js" },
+    "./vue": { "types": "./dist/vue.d.ts", "import": "./dist/vue.js", "default": "./dist/vue.js" },
+    "./element": { "types": "./dist/element.d.ts", "import": "./dist/element.js", "default": "./dist/element.js" },
+    "./emojis/*": { "types": "./dist/emojis/*.d.ts", "import": "./dist/emojis/*.js", "default": "./dist/emojis/*.js" },
+    "./styles.css": "./dist/styles.css",
+    "./package.json": "./package.json"
+  },
+  "files": ["dist", "README.md", "LICENSE"],
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node test/run.mjs",
+    "prepublishOnly": "npm run build && npm test"
+  },
+  "peerDependencies": {
+    "react": ">=17",
+    "vue": ">=3.2"
+  },
+  "peerDependenciesMeta": {
+    "react": { "optional": true },
+    "vue": { "optional": true }
+  },
+  "engines": { "node": ">=18" }
+}
